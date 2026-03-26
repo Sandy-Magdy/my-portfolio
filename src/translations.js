@@ -2,14 +2,17 @@ export const translations = {
   en: {
     nav: {
       home: 'Home',
-      projects: 'Projects',
       about: 'About',
+      skills: 'Skills',
+      projects: 'Projects',
       experience: 'Experience',
+      services: 'Services',
+      reviews: 'Reviews',
       contact: 'Contact',
     },
     hero: {
       hello: "Hello, I'm",
-      bio: 'Building responsive, high-performance UIs with React, TypeScript & Tailwind. WordPress & WooCommerce. Clean code & seamless digital experiences.',
+      bio: 'Frontend Developer skilled in React, JavaScript, TypeScript, Tailwind CSS, and Bootstrap.\nWordPress developer with expertise in custom themes and WooCommerce. Passionate about clean code and seamless digital experiences.',
       exploreWork: 'Explore My Work',
       getInTouch: 'Get in Touch',
       projectsBuilt: 'Projects Built',
@@ -19,10 +22,13 @@ export const translations = {
       titles: ['Frontend Developer', 'WordPress Developer', 'React Developer', 'UI Enthusiast'],
     },
     about: {
-      title: 'About',
-      paragraph: 'Frontend Developer skilled in React, JavaScript, TypeScript, Tailwind CSS, and Bootstrap. Experienced in building responsive, high-performance UIs and optimizing for speed and usability. WordPress developer with expertise in custom themes and WooCommerce. Passionate about clean code and seamless digital experiences.',
+      title: 'About Me',
+      name: 'Sandy Magdy',
+      professionalTitle: 'Frontend Developer',
+      paragraph: 'Frontend Developer skilled in React, JavaScript, TypeScript, Tailwind CSS, and Bootstrap.\nExperienced in building responsive, high-performance UIs and optimizing for speed and usability.\nWordPress developer with expertise in custom themes and WooCommerce.\nPassionate about clean code and seamless digital experiences.',
       arabic: 'Arabic: Native',
       english: 'English: B2',
+      closingLine: 'Passionate about clean code and seamless digital experiences.',
     },
     experience: {
       title: 'Experience',
@@ -77,11 +83,18 @@ export const translations = {
     skills: {
       title: 'Skills',
       groups: [
-        { title: 'Frontend', items: ['HTML5', 'CSS', 'JavaScript (ES6+)', 'TypeScript', 'Bootstrap', 'Tailwind CSS', 'React'] },
-        { title: 'Backend', items: ['Node.js', 'Express.js', 'REST API', 'Object-Oriented Programming (OOP)'] },
-        { title: 'Database', items: ['MongoDB'] },
-        { title: 'Version Control & Tools', items: ['Git', 'GitHub'] },
-        { title: 'Development Practices', items: ['Clean Code', 'Responsive Design', 'Performance Optimization'] },
+        {
+          title: 'Frontend',
+          items: ['HTML5', 'CSS', 'JavaScript (ES6+)', 'TypeScript', 'Bootstrap', 'Tailwind CSS', 'React'],
+        },
+        {
+          title: 'Backend',
+          items: ['Node.js', 'Express.js', 'REST API', 'Object-Oriented Programming (OOP)', 'MongoDB'],
+        },
+        {
+          title: 'Tools',
+          items: ['Git', 'GitHub', 'Clean Code', 'Responsive Design', 'Performance Optimization'],
+        },
       ],
     },
     projects: {
@@ -95,30 +108,106 @@ export const translations = {
       code: 'Code',
       getInTouch: 'Get In Touch',
       list: [
-        { title: 'Bakery', category: 'web', description: 'Full responsive bakery website with sections: Home, About, Our Offer, Gallery, Blog, Contact. Modern UI with smooth navigation.', tags: ['HTML', 'CSS', 'Responsive', 'Landing'] },
-        { title: 'Quote of the Day', category: 'frontend', description: 'Press the button to get a random quote. Clean, interactive quote generator.', tags: ['JavaScript', 'Interactive', 'UI'] },
-        { title: 'Daniels – Bootstrap Portfolio', category: 'frontend', description: 'Responsive single-page portfolio landing page using Bootstrap to demonstrate frontend layout and component skills.', tags: ['Bootstrap', 'Responsive', 'Landing Page'] },
-        { title: 'Smart Login Page', category: 'ui', description: 'Responsive login page with HTML5, CSS3, and Bootstrap: form validation, social login buttons, gradient background, subtle animations.', tags: ['HTML5', 'CSS3', 'Bootstrap', 'Form Validation'] },
+        {
+          title: 'Daniels',
+          category: 'frontend',
+          description: 'Built a responsive single-page portfolio landing page using Bootstrap.\nDemonstrates frontend layout and component skills.',
+          tags: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'Responsive'],
+        },
+        { title: 'DevFolio', category: 'frontend', description: 'Bootstrap portfolio with services, works grid and blog previews.\nClean, responsive layout and interactive sections.', tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Responsive'] },
+        { title: 'Mealify', category: 'web', description: 'Restaurant landing page with chefs, gallery and contact.\nNewsletter + quick links for a smooth user experience.', tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'Landing Page'] },
+        { title: 'Bakery', category: 'web', description: 'Family bakery multi-section page covering offers, gallery and contact.\nIncludes location, opening hours and modern content blocks.', tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'Landing Page'] },
+        { title: 'News', category: 'ui', description: 'News project home with categories, weather and exchange-rate widgets.\nPlaceholders for live matches and dynamic content areas.', tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'Widgets'] },
+      ],
+    },
+    services: {
+      title: 'Services',
+      items: [
+        {
+          title: 'Web Development',
+          description: 'Full-stack web applications built with modern technologies and best practices.',
+          details: ['Custom web applications', 'CMS integration', 'E-commerce solutions', 'Database design'],
+        },
+        {
+          title: 'Frontend Engineering',
+          description: 'Pixel-perfect, interactive user interfaces with smooth animations and transitions.',
+          details: ['Component-based architecture', 'State management', 'Animation & motion', 'Accessibility (a11y)'],
+        },
+        {
+          title: 'Backend Development',
+          description: 'Robust server-side solutions with secure APIs and scalable architecture.',
+          details: ['RESTful API design', 'Authentication & security', 'Database optimization', 'Cloud deployment'],
+        },
+        {
+          title: 'API Integration',
+          description: 'Seamless third-party service integration and custom API development.',
+          details: ['Payment gateways', 'Social media APIs', 'Analytics platforms', 'Custom webhooks'],
+        },
+        {
+          title: 'Responsive Design',
+          description: 'Designs that look and work flawlessly across every device and screen size.',
+          details: ['Mobile-first approach', 'Cross-browser testing', 'Touch-optimized UI', 'Adaptive layouts'],
+        },
+        {
+          title: 'Performance Optimization',
+          description: 'Lightning-fast load times through code splitting, caching, and asset optimization.',
+          details: ['Core Web Vitals', 'Asset compression', 'Lazy loading', 'SEO optimization'],
+        },
+      ],
+    },
+    reviews: {
+      title: 'Reviews',
+      items: [
+        {
+          text: 'Michel delivered an outstanding e-commerce platform that exceeded our expectations. His attention to detail and clean code made the entire process smooth and professional.',
+          name: 'Alex Smith',
+          role: 'Product Owner',
+        },
+        {
+          text: 'Working with Michel was a fantastic experience. He transformed our vision into a beautiful, responsive website with incredible animations and performance.',
+          name: 'Sarah Johnson',
+          role: 'Project Manager',
+        },
+        {
+          text: 'Michel has an exceptional eye for translating designs into pixel-perfect code. His technical skills combined with design sensibility make him a rare find.',
+          name: 'Michael Clark',
+          role: 'Engineering Manager',
+        },
+        {
+          text: 'The gym website Michel built for us has significantly increased our online presence. Professional, fast, and always communicative throughout the project.',
+          name: 'Emily Davis',
+          role: 'Startup Founder',
+        },
       ],
     },
     contact: {
-      title: 'Contact',
-      subtitle: "Want to see more projects or discuss a collaboration? I'm open to new opportunities. Get in touch!",
+      title: 'Get In Touch',
+      subtitle: "Have a project in mind? Let's build something amazing together.",
       cairo: 'Cairo, Egypt',
+      form: {
+        name: 'Your Name',
+        email: 'Email',
+        message: 'Message',
+        send: 'Send Message',
+        hint: 'Your message will open in your email app.',
+      },
     },
     footer: 'Frontend Developer',
   },
   ar: {
     nav: {
       home: 'الرئيسية',
-      projects: 'المشاريع',
       about: 'عني',
+      skills: 'المهارات',
+      projects: 'المشاريع',
       experience: 'الخبرات',
+      services: 'الخدمات',
+      reviews: 'آراء العملاء',
       contact: 'تواصل',
     },
     hero: {
       hello: 'مرحباً، أنا',
-      bio: 'مطورة واجهات أمامية. أبني واجهات سريعة ومتجاوبة بـ React و TypeScript و Tailwind. ووردبريس و WooCommerce. كود نظيف وتجربة رقمية سلسة.',
+      bio: 'مطوّرة واجهات أمامية متمكنة من React و JavaScript و TypeScript و Tailwind CSS و Bootstrap.\nمطوّرة ووردبريس بخبرة في القوالب المخصصة و WooCommerce. شغوفة بالكود النظيف والتجارب الرقمية السلسة.',
       exploreWork: 'شاهدي أعمالي',
       getInTouch: 'تواصلي معي',
       projectsBuilt: 'مشروع منفذ',
@@ -128,10 +217,13 @@ export const translations = {
       titles: ['مطورة واجهات أمامية', 'مطورة ووردبريس', 'مطورة React', 'مهتمة بواجهات المستخدم'],
     },
     about: {
-      title: 'عني',
-      paragraph: 'مطورة واجهات أمامية متخصصة في React و JavaScript و TypeScript و Tailwind CSS و Bootstrap. خبرة في بناء واجهات متجاوبة وعالية الأداء وتحسين السرعة وسهولة الاستخدام. مطورة ووردبريس مع خبرة في القوالب المخصصة و WooCommerce. شغوفة بالكود النظيف والتجارب الرقمية السلسة.',
+      title: 'من أنا',
+      name: 'Sandy Magdy',
+      professionalTitle: 'Frontend Developer',
+      paragraph: 'مطوّرة واجهات أمامية متخصصة في React و JavaScript و TypeScript و Tailwind CSS و Bootstrap.\nخبيرة في بناء واجهات متجاوبة وعالية الأداء وتحسين السرعة وسهولة الاستخدام.\nمطوّرة ووردبريس بخبرة في القوالب المخصصة و WooCommerce.\nشغوفة بالكود النظيف والتجارب الرقمية السلسة.',
       arabic: 'العربية: لغة أم',
       english: 'الإنجليزية: B2',
+      closingLine: 'شغوفة بالكود النظيف والتجارب الرقمية السلسة.',
     },
     experience: {
       title: 'الخبرات',
@@ -186,11 +278,18 @@ export const translations = {
     skills: {
       title: 'المهارات',
       groups: [
-        { title: 'الواجهات الأمامية', items: ['HTML5', 'CSS', 'JavaScript (ES6+)', 'TypeScript', 'Bootstrap', 'Tailwind CSS', 'React'] },
-        { title: 'الخلفية', items: ['Node.js', 'Express.js', 'REST API', 'البرمجة كائنية التوجه (OOP)'] },
-        { title: 'قواعد البيانات', items: ['MongoDB'] },
-        { title: 'أدوات التحكم والإصدارات', items: ['Git', 'GitHub'] },
-        { title: 'ممارسات التطوير', items: ['كود نظيف', 'تصميم متجاوب', 'تحسين الأداء'] },
+        {
+          title: 'الواجهات الأمامية',
+          items: ['HTML5', 'CSS', 'JavaScript (ES6+)', 'TypeScript', 'Bootstrap', 'Tailwind CSS', 'React'],
+        },
+        {
+          title: 'الخلفية',
+          items: ['Node.js', 'Express.js', 'REST API', 'البرمجة كائنية التوجه (OOP)', 'MongoDB'],
+        },
+        {
+          title: 'الأدوات',
+          items: ['Git', 'GitHub', 'كود نظيف', 'تصميم متجاوب', 'تحسين الأداء'],
+        },
       ],
     },
     projects: {
@@ -204,24 +303,93 @@ export const translations = {
       code: 'الكود',
       getInTouch: 'تواصلي معي',
       list: [
-        { title: 'Bakery', category: 'web', description: 'موقع مخبز متجاوب بأقسام: الرئيسية، عنا، العروض، المعرض، المدونة، اتصل بنا. واجهة حديثة وتنقل سلس.', tags: ['HTML', 'CSS', 'متجاوب', 'لاندنج'] },
-        { title: 'اقتباس اليوم', category: 'frontend', description: 'اضغطي الزر للحصول على اقتباس عشوائي. أداة اقتباسات تفاعلية وبسيطة.', tags: ['JavaScript', 'تفاعلي', 'واجهة'] },
-        { title: 'Daniels – بورتفوليو Bootstrap', category: 'frontend', description: 'صفحة هبوط بورتفوليو متجاوبة باستخدام Bootstrap لعرض مهارات التخطيط والمكونات.', tags: ['Bootstrap', 'متجاوب', 'لاندنج'] },
-        { title: 'صفحة تسجيل دخول ذكية', category: 'ui', description: 'صفحة تسجيل دخول متجاوبة بـ HTML5 و CSS3 و Bootstrap: التحقق من النماذج، أزرار تسجيل اجتماعي، خلفية متدرجة وحركات بسيطة.', tags: ['HTML5', 'CSS3', 'Bootstrap', 'التحقق من النماذج'] },
+        { title: 'Daniels', category: 'frontend', description: 'صفحة بورتفوليو لمصمم UI / UX ومطوّر ويب.\nأقسام: Hello, About, Services, Portfolio و Testimonials.', tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'UI/UX'] },
+        { title: 'DevFolio', category: 'frontend', description: 'بورتفوليو مبني بـ Bootstrap مع أقسام خدمات وWorks و Blog.\nواجهة متجاوبة وتجربة تفاعلية.', tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Responsive'] },
+        { title: 'Mealify', category: 'web', description: 'صفحة هبوط لمطعم تشمل Chefs و Gallery و Contact.\nNewsletter + روابط سريعة لتجربة مستخدم سلسة.', tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'Landing Page'] },
+        { title: 'Bakery', category: 'web', description: 'صفحة Bakery متعددة الأقسام تشمل العروض و المعرض و Contact.\nتتضمن الموقع وساعات العمل ومحتوى حديث.', tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'Landing Page'] },
+        { title: 'News', category: 'ui', description: 'صفحة مشروع News مع أقسام للطقس وصرف العملات.\nتضم مكان لعروض Live matches ومحتوى ديناميكي.', tags: ['HTML', 'CSS', 'JavaScript', 'Responsive', 'Widgets'] },
+      ],
+    },
+    services: {
+      title: 'الخدمات',
+      items: [
+        {
+          title: 'تطوير الويب',
+          description: 'تطبيقات ويب متكاملة من الواجهة إلى الخلفية باستخدام تقنيات حديثة وأفضل الممارسات.',
+          details: ['تطبيقات ويب مخصصة', 'تكامل أنظمة إدارة المحتوى (CMS)', 'حلول التجارة الإلكترونية', 'تصميم قواعد البيانات'],
+        },
+        {
+          title: 'هندسة الواجهات الأمامية',
+          description: 'واجهات مستخدم دقيقة وتفاعلية مع حركات وانتقالات سلسة.',
+          details: ['تصميم مكوّنات مبني على الهيكلة', 'إدارة الحالة', 'الحركة والأنيميشن', 'إتاحة الاستخدام (a11y)'],
+        },
+        {
+          title: 'تطوير الخلفية',
+          description: 'حلول خوادم قوية بواجهات API آمنة وبنية قابلة للتوسع.',
+          details: ['تصميم RESTful API', 'المصادقة والأمان', 'تحسين قواعد البيانات', 'نشر الخدمات السحابية'],
+        },
+        {
+          title: 'تكامل الـ API',
+          description: 'تكامل سلس مع خدمات طرف ثالث وتطوير واجهات API مخصصة.',
+          details: ['بوابات الدفع', 'واجهات منصات التواصل الاجتماعي', 'منصات التحليلات', 'Webhooks مخصصة'],
+        },
+        {
+          title: 'التصميم المتجاوب',
+          description: 'تصميمات تعمل بشكل ممتاز عبر كل الأجهزة وأحجام الشاشات.',
+          details: ['نهج Mobile-first', 'اختبار التوافق عبر المتصفحات', 'واجهة مُحسّنة للمس', 'تخطيطات قابلة للتكيف'],
+        },
+        {
+          title: 'تحسين الأداء',
+          description: 'أوقات تحميل سريعة عبر تقسيم الكود، التخزين المؤقت، وتحسين الموارد.',
+          details: ['Core Web Vitals', 'ضغط الموارد', 'تحميل كسول (Lazy loading)', 'تحسين SEO'],
+        },
+      ],
+    },
+    reviews: {
+      title: 'آراء العملاء',
+      items: [
+        {
+          text: 'قدّم Michel منصة تجارة إلكترونية مميزة تفوقت على توقعاتنا. اهتمامه بالتفاصيل وكود نظيف جعل سير العمل سلساً واحترافياً.',
+          name: 'Alex Smith',
+          role: 'Product Owner',
+        },
+        {
+          text: 'كان العمل مع Michel تجربة رائعة. حوّل رؤيتنا إلى موقع جميل ومتجاوب مع حركات وأنيميشن وأداء مميز.',
+          name: 'Sarah Johnson',
+          role: 'Project Manager',
+        },
+        {
+          text: 'لدى Michel عين استثنائية لتحويل التصاميم إلى كود دقيق مطابق للبكسل. مهاراته التقنية مع حس التصميم يجعله اختياراً نادراً.',
+          name: 'Michael Clark',
+          role: 'Engineering Manager',
+        },
+        {
+          text: 'ساهم موقع الجيم الذي أنشأه Michel معنا بشكل كبير في زيادة حضورنا على الإنترنت. كان احترافياً وسريعاً ومتواصلاً بشكل مستمر طوال المشروع.',
+          name: 'Emily Davis',
+          role: 'Startup Founder',
+        },
       ],
     },
     contact: {
-      title: 'تواصل',
-      subtitle: 'ترغبين برؤية المزيد من المشاريع أو مناقشة تعاون؟ أنا متاحة لفرص جديدة. تواصلي معي!',
+      title: 'تواصل معنا',
+      subtitle: 'لديك مشروع في بالك؟ لنعمل معاً على شيء رائع.',
       cairo: 'القاهرة، مصر',
+      form: {
+        name: 'اسمك',
+        email: 'البريد الإلكتروني',
+        message: 'رسالتك',
+        send: 'إرسال الرسالة',
+        hint: 'سيتم فتح رسالة في تطبيق البريد الإلكتروني.',
+      },
     },
     footer: 'مطورة واجهات أمامية',
   },
 }
 
 export const projectUrls = [
+  { liveUrl: 'https://sandy-magdy.github.io/Daniels/', repoUrl: null },
+  { liveUrl: 'https://sandy-magdy.github.io/Devfolio/', repoUrl: null },
+  { liveUrl: 'https://sandy-magdy.github.io/Mealfiy/', repoUrl: null },
   { liveUrl: 'https://sandy-magdy.github.io/bakery/', repoUrl: null },
-  { liveUrl: 'https://sandy-magdy.github.io/Quote/', repoUrl: null },
-  { liveUrl: null, repoUrl: null },
-  { liveUrl: null, repoUrl: null },
+  { liveUrl: 'https://sandy-magdy.github.io/News/', repoUrl: null },
 ]

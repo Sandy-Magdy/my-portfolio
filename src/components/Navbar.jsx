@@ -3,9 +3,12 @@ import { useLang } from '../context/LangContext'
 
 const linkIds = [
   { href: '#home', key: 'home' },
-  { href: '#projects', key: 'projects' },
   { href: '#about', key: 'about' },
+  { href: '#skills', key: 'skills' },
+  { href: '#projects', key: 'projects' },
   { href: '#experience', key: 'experience' },
+  { href: '#services', key: 'services' },
+  { href: '#reviews', key: 'reviews' },
   { href: '#contact', key: 'contact' },
 ]
 

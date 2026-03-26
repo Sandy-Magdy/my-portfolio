@@ -1,13 +1,5 @@
-import { useState } from 'react'
 import { useLang } from '../context/LangContext'
 import { projectUrls } from '../translations'
-
-const categoryIds = [
-  { id: 'all', key: 'allProjects', icon: '🎯' },
-  { id: 'web', key: 'web', icon: '🌐' },
-  { id: 'frontend', key: 'frontend', icon: '⚛️' },
-  { id: 'ui', key: 'ui', icon: '✨' },
-]
 
 function ProjectCard({ project, liveUrl, repoUrl, t }) {
   return (
@@ -16,18 +8,13 @@ function ProjectCard({ project, liveUrl, repoUrl, t }) {
         <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition">
           {project.title}
         </h3>
-        <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.description}</p>
+        <p className="text-muted-foreground text-sm mb-4 whitespace-pre-line leading-relaxed">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
-          {project.tags.slice(0, 3).map((tag, j) => (
+          {project.tags.map((tag, j) => (
             <span key={j} className="px-2 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
               {tag}
             </span>
           ))}
-          {project.tags.length > 3 && (
-            <span className="px-2 py-1 rounded-full bg-muted text-muted-foreground text-xs">
-              +{project.tags.length - 3}
-            </span>
-          )}
         </div>
         <div className="flex gap-3">
           {liveUrl && (
@@ -51,40 +38,19 @@ function ProjectCard({ project, liveUrl, repoUrl, t }) {
 }
 
 export default function Projects() {
-  const [category, setCategory] = useState('all')
   const { t, translations } = useLang()
   const projectsData = translations?.projects
 
   if (!projectsData) return null
-
-  const categories = categoryIds.map((c) => ({ ...c, label: projectsData[c.key] ?? c.key }))
   const list = projectsData.list ?? []
-  const filtered = category === 'all' ? list : list.filter((p) => p.category === category)
 
   return (
     <section id="projects" className="bg-muted/30">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4">
         <h2 className="section-title">{projectsData.title}</h2>
         <p className="section-subtitle">{projectsData.subtitle}</p>
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((c) => (
-            <button
-              key={c.id}
-              type="button"
-              onClick={() => setCategory(c.id)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 ${
-                category === c.id
-                  ? 'bg-gradient-to-r from-primary to-accent text-white shadow-lg shadow-primary/25'
-                  : 'border-2 border-primary/50 text-foreground hover:bg-primary/10'
-              }`}
-            >
-              <span>{c.icon}</span>
-              <span className="font-medium">{c.label}</span>
-            </button>
-          ))}
-        </div>
         <div className="grid gap-8 md:grid-cols-2">
-          {filtered.map((project, i) => (
+          {list.map((project, i) => (
             <ProjectCard
               key={i}
               project={project}
